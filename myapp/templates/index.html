@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MYAPP</title>
+</head>
+
+<table class="table" cellspacing="20"> <caption><b>4-1</b></caption>
+  <head>
+        <title>4-1</title>
+  </head>
+    <tr>
+      
+      <th scope="col">S.NO</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Author</th>
+      <th scope="col">Pdf's</th>
+    
+    </tr>
+  
+
+  <tbody>
+    <tr>
+      {% for i in books %}
+      <th scope="row">{{forloop.counter}}</th>
+      <th scope="row">{{i.subject}}</th>
+      <th scope="row">{{i.author}}</th>
+      
+      <td><a href="{{i.book.url}}">Unit-1</a></td>
+      <td><a href="{{i.book1.url}}">Unit-2</a></td>
+      <td><a href="{{i.book2.url}}">Unit-3</a></td>
+      <td><a href="{{i.book3.url}}">Unit-4</a></td>
+      <td><a href="{{i.book4.url}}">Unit-5</a></td>
+      <td><a href="{{i.book5.url}}">Unit-6</a></td>
+
+    </tr>
+    {% endfor %}
+
+
+
+<table class="table" cellspacing="20">    <caption><b>3-2</b></caption>
+  <thead>
+    <tr>
+      
+      <th scope="col">S.NO</th>
+      <th scope="col">subject</th>
+      <th scope="col">author</th>
+      <th scope="col">pdf</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {% for i in pdfs %}
+      <th scope="row">{{forloop.counter}}</th>
+      <th scope="row">{{i.subject}}</th>
+      <th scope="row">{{i.author}}</th>
+      
+      <td><a href="{{i.pdf1.url}}">Unit-1</a></td>
+      <td><a href="{{i.pdf2.url}}">Unit-2</a></td>
+      <td><a href="{{i.pdf3.url}}">Unit-3</a></td>
+      <td><a href="{{i.pdf4.url}}">Unit-4</a></td>
+      <td><a href="{{i.pdf5.url}}">Unit-5</a></td>
+      <td><a href="{{i.pdf6.url}}">Unit-6</a></td>
+    </tr>
+    {% endfor %}
+    
+
+  <br><br>
+
+
+
+</html>
